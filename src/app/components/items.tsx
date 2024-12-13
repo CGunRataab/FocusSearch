@@ -1,16 +1,16 @@
 import { ItemType } from "../page";
 
-export default function Items({ title, desc, image }: ItemType) {
+export default function Items({ username, location, name, picture }: ItemType) {
   return (
     <div className="flex items-center justify-center flex-col">
       <img
         loading="lazy"
-        alt={title}
-        className="w-48 bg-white h-48"
-        src={image}
+        alt={username}
+        className="bg-white"
+        src={picture.medium}
       ></img>
-      <div>{title}</div>
-      <div>{desc}</div>
+      <div>{username}</div>
+      <div></div>
     </div>
   );
 }
